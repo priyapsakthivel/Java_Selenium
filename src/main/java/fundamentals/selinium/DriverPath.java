@@ -8,4 +8,9 @@ public class DriverPath {
         File file = new File("P:/Webdrivers/edgedriver.exe");
         System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
     }
+
+    public static void setDriverPaths(){
+        File file = new File("P:/Webdrivers/edgedriver.exe");
+        System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
+    }
 }
