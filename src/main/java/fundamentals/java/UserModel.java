@@ -4,6 +4,17 @@ public class UserModel {
     private int age;
     private String name;
     private String gender;
+
+    public boolean isAlive() {
+        return isAlive;
+    }
+
+    public void setAlive(boolean alive) {
+        isAlive = alive;
+    }
+
+    private boolean isAlive;
+
 //    getter-setter
 //    pojo--> plain old java object
 
