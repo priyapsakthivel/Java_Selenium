@@ -10,11 +10,12 @@ public class MethodGetters {
         userModel.setAge(22);
         userModel.setName("Dora");
         userModel.setGender("F");
+        userModel.setAlive(true);
 
         UserModel userModel1= new UserModel();
         userModel1.setAge(25);
         userModel1.setName("john");
-        userModel1.setGender("M");
+       userModel1.setGender("M");
 
 
         List<String> list1=new ArrayList<String>();
@@ -30,6 +31,8 @@ public class MethodGetters {
             System.out.println(list2.get(a).getAge());
             System.out.println(list2.get(a).getGender());
             System.out.println(list2.get(a).getName());
+            System.out.println(list2.get(a).isAlive());
+
         }
 
     }
