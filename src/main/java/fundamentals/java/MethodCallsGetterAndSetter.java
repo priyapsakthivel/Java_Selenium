@@ -13,10 +13,10 @@ public class MethodCallsGetterAndSetter {
 //        System.out.println(getterAndSetterCreation.getCar1());
         List <GetterAndSetterCreation> list = new ArrayList<GetterAndSetterCreation>();
         list.add(getterAndSetterCreation);
-        for(int a=0;a<1;a++){
-            System.out.println(list.get(0).getCar1());
-            System.out.println(list.get(0).getCar2());
-            System.out.println(list.get(0).getCar3());
+        for(int a=0;a<list.size();a++){
+            System.out.println(list.get(a).getCar1());
+            System.out.println(list.get(a).getCar2());
+            System.out.println(list.get(a).getCar3());
         }
     }
 }
