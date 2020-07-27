@@ -5,6 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AmazonWithoutLogin {
     public static void main(String[] args) throws InterruptedException {
@@ -32,7 +33,8 @@ public class AmazonWithoutLogin {
          WebElement save=webDriver.findElement(By.id("sfl-button"));
          save.click();
 
-        Thread.sleep(20000);
-        webDriver.quit();
+        //Thread.sleep(20000);
+        //webDriver.quit();
+
     }
 }
