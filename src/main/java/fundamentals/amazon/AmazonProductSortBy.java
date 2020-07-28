@@ -2,9 +2,12 @@ package fundamentals.amazon;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import javax.print.DocFlavor;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AmazonProductSortBy {
     public static void main(String[] args) throws InterruptedException {
@@ -17,13 +20,13 @@ public class AmazonProductSortBy {
         WebElement searchbox= webDriver.findElement(By.id("twotabsearchtextbox"));
         searchbox.sendKeys("samsunglevelu");
         searchbox.sendKeys(Keys.ENTER);
-
-        JavascriptExecutor javascriptExecutor= (JavascriptExecutor)webDriver;
-        javascriptExecutor.executeScript("ScrollTo(0,200)");
-
-        WebElement productChoice = webDriver.findElement(By.id("s-result-sort-select"));
+        Thread.sleep(2000);
+        WebElement productChoice = webDriver.findElement(By.xpath("//*[@id=\"a-autoid-0-announce\"]/span[2]"));
         productChoice.click();
         Thread.sleep(2000);
+
+       Select list= new Select (webDriver.findElement(By.id("s-result-sort-select")));
+       list.selectByValue("price-asc-rank");
 
     }
 }
