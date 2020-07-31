@@ -20,14 +20,14 @@ public class AmazonLoginEdit {
         webDriver.manage().window().maximize();
         Thread.sleep(2000);
         WebElement login= webDriver.findElement(By.id("ap_email"));
-        login.sendKeys("zooomstudios@gmail.com");
+        login.sendKeys("");
         WebElement continueButton =webDriver.findElement(By.id("continue"));
         continueButton.click();
         Thread.sleep(2000);
 
         WebElement passwordButton = webDriver.findElement(By.id("ap_password"));
         Thread.sleep(200);
-        passwordButton.sendKeys("29082015@Begins");
+        passwordButton.sendKeys("");
         WebElement loginButton=webDriver.findElement(By.id("signInSubmit"));
         loginButton.click();
         Thread.sleep(2000);
