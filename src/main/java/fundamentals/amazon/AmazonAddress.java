@@ -19,16 +19,26 @@ public class AmazonAddress {
         webDriver.manage().window().maximize();
         Thread.sleep(2000);
         WebElement login= webDriver.findElement(By.id("ap_email"));
-        login.sendKeys("ytbobtester@gmailcom");
+        login.sendKeys("zooomstudios@gmail.com");
         WebElement continueButton =webDriver.findElement(By.id("continue"));
         continueButton.click();
         Thread.sleep(2000);
 
         WebElement passwordButton = webDriver.findElement(By.id("ap_password"));
-        passwordButton.sendKeys("Labone2six");
+        Thread.sleep(200);
+        passwordButton.sendKeys("29082015@Begins");
         WebElement loginButton=webDriver.findElement(By.id("signInSubmit"));
         loginButton.click();
         Thread.sleep(2000);
+
+        WebElement menuButton=webDriver.findElement(By.id("nav-hamburger-menu"));
+        menuButton.click();
+        WebElement accountIcon=webDriver.findElement(By.id("hmenu-customer-profile-link"));
+        accountIcon.click();
+        WebElement address= webDriver.findElement(By.xpath("//*[@id=\"a-page\"]/div[2]/div/div[3]/div[1]/a"));
+        address.click();
+        WebElement addAddress=webDriver.findElement(By.id("ya-myab-address-add-link"));
+        addAddress.click();
 
 
     }
