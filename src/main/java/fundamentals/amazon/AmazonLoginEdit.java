@@ -35,7 +35,7 @@ public class AmazonLoginEdit {
         passwordButton.sendKeys(password);
         WebElement loginButton=webDriver.findElement(By.id("signInSubmit"));
         loginButton.click();
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
         WebElement menuButton=webDriver.findElement(By.id("nav-hamburger-menu"));
         menuButton.click();
