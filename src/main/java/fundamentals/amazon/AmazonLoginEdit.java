@@ -28,7 +28,7 @@ public class AmazonLoginEdit {
         login.sendKeys(username);
         WebElement continueButton =webDriver.findElement(By.id("continue"));
         continueButton.click();
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
         WebElement passwordButton = webDriver.findElement(By.id("ap_password"));
         Thread.sleep(200);
