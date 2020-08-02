@@ -28,18 +28,35 @@ public class AmazonLoginEdit {
         login.sendKeys(username);
         WebElement continueButton =webDriver.findElement(By.id("continue"));
         continueButton.click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
 
         WebElement passwordButton = webDriver.findElement(By.id("ap_password"));
-        Thread.sleep(200);
+        Thread.sleep(2000);
         passwordButton.sendKeys(password);
         WebElement loginButton=webDriver.findElement(By.id("signInSubmit"));
         loginButton.click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
 
         WebElement menuButton=webDriver.findElement(By.id("nav-hamburger-menu"));
         menuButton.click();
         WebElement accountIcon=webDriver.findElement(By.id("hmenu-customer-profile-link"));
         accountIcon.click();
+        Thread.sleep(2000);
+        WebElement loginEdit=webDriver.findElement(By.xpath("//*[@id=\"a-page\"]/div[2]/div/div[2]/div[2]/a"));
+        loginEdit.click();
+        Thread.sleep(2000);
+        WebElement nameEdit=webDriver.findElement(By.id("auth-cnep-edit-name-button"));
+        nameEdit.click();
+        Thread.sleep(2000);
+        WebElement nameTextBox=webDriver.findElement(By.id("ap_customer_name"));
+        nameTextBox.click();
+        Thread.sleep(2000);
+        WebElement nameTextSubmit=webDriver.findElement(By.id("cnep_1C_submit_button"));
+        nameTextSubmit.click();
+        Thread.sleep(2000);
+        WebElement successStatus=webDriver.findElement(By.id("auth-success-message-box"));
+        String status=successStatus.getText();
+        System.out.println(status);
+
     }
 }
