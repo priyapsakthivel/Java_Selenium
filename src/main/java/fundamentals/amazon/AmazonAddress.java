@@ -31,8 +31,8 @@ public class AmazonAddress {
         Thread.sleep(2000);
 
         WebElement passwordButton = webDriver.findElement(By.id("ap_password"));
-        Thread.sleep(200);
         passwordButton.sendKeys(password);
+        Thread.sleep(200);
         WebElement loginButton=webDriver.findElement(By.id("signInSubmit"));
         loginButton.click();
         Thread.sleep(2000);
