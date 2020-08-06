@@ -16,7 +16,7 @@ public class AmazonSecondProductPrice {
         driver.manage().window().maximize();
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("table");
         JavascriptExecutor jse= (JavascriptExecutor)driver;
-        jse.executeScript("scrollTo(0,200)");
+        jse.executeScript("scrollTo(0,500)");
 
 
 
