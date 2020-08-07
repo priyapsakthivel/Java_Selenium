@@ -26,7 +26,7 @@ public class AmazonSecondProductPrice {
         WebElement price=driver.findElement(By.id("priceblock_dealprice"));
         String netprice=price.getText();
 
-        System.out.println(netprice);
+        System.out.println("price of table ="+netprice);
 
 
 
