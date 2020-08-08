@@ -5,10 +5,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class AmazonSecondProductPrice {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
         File file= new File("P:/Webdrivers/edgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver driver= new EdgeDriver();
@@ -19,19 +21,19 @@ public class AmazonSecondProductPrice {
         searchBox.sendKeys(Keys.ENTER);
         JavascriptExecutor jse= (JavascriptExecutor)driver;
         jse.executeScript("scrollTo(0,200)");
-        WebElement secondProduct=driver.findElement(By.xpath("//*[@id=\"anonCarousel1\"]/ol/li[2]/div/div/span/a"));
+        Thread.sleep(2000);
+        WebElement secondProduct=driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div/div[1]/div/span[3]/div[2]/div[4]/div/span/div/div/div/div/div[2]/h2/a"));
         secondProduct.click();
         ArrayList<String> tab=new ArrayList <String> (driver.getWindowHandles());
         driver.switchTo().window(tab.get(1));
-        WebElement price=driver.findElement(By.id("priceblock_dealprice"));
+        Thread.sleep(2000);
+
+        WebElement price=driver.findElement(By.id("priceblock_saleprice"));
         String netprice=price.getText();
+        Thread.sleep(2000);
 
         System.out.println("price of table ="+netprice);
-
-
-
-
-
-
+        Thread.sleep(3000);
+        driver.quit();
     }
 }
