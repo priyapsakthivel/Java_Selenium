@@ -3,13 +3,13 @@ package fundamentals.Preparation;
 
     public class JavaFundamentals {
         public static void main(String[]args){
-            fundamentals.Preparation.JavaFundamentals.methodTry();
+            JavaFundamentals.methodTry();
         }
-        public static int methodTry(){
-            int a= 10;
-            return(5);
+        public static int methodTry() {
+            int a = 10;
+            return (5);
         }
-        int returnStorage= fundamentals.Preparation.JavaFundamentals.methodTry();
+        int returnStorage=JavaFundamentals.methodTry();
                     System.out.println(returnStorage);
 
     }
