@@ -1,7 +1,12 @@
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import java.util.Scanner;
 
 public class Calculator {
-    public static void main(String[] args) {
+
+    @BeforeTest
+    public void scanner() {
         Scanner scanner= new Scanner(System.in);
         System.out.println("please enter number 1");
         int a=scanner.nextInt();
@@ -22,26 +27,31 @@ public class Calculator {
             obj.reminder(a,b);}
 
     }
+    @Test
     public int add(int a,int b){
         int sum=a+b;
         System.out.println(sum);
         return (1);
     }
+    @Test
     public int subtract(int a,int b){
         int sub=a-b;
         System.out.println(sub);
         return (1);
     }
+    @Test
     public int multiply(int a,int b){
         int multi=a*b;
         System.out.println(multi);
         return (1);
     }
+    @Test
     public int divide(int a,int b){
         int div=a/b;
         System.out.println(div);
         return (1);
     }
+    @Test
     public int reminder(int a,int b){
         int remain=a%b;
         System.out.println(remain);
