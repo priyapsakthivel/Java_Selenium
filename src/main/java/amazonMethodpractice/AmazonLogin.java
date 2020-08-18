@@ -29,7 +29,7 @@ public class AmazonLogin {
         driver.findElement(By.xpath("//*[@id=\"nav-flyout-ya-signin\"]/a"));
         driver.findElement(By.id("ap_email")).sendKeys("****@gmail.com");
         driver.findElement(By.id("continue")).click();
-        driver.findElement(By.id("ap_password")).sendKeys("*********");
+        driver.findElement(By.id("ap_password")).sendKeys("********");
         driver.findElement(By.id("continue")).click();
     }
 }
