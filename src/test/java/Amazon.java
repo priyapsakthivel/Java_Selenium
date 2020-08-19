@@ -45,6 +45,7 @@ public class Amazon {
         driver.findElement(By.id("cnep_1C_submit_button")).click();
         Thread.sleep(2000);
         driver.findElement(By.id("auth-success-message-box")).getText();
-        assert();
+        String a="selected";
+        assert(a.equals("") );
     }
 }
