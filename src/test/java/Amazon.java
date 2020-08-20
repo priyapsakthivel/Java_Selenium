@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Amazon {
     @BeforeTest
@@ -47,5 +48,23 @@ public class Amazon {
         driver.findElement(By.id("auth-success-message-box")).getText();
         String a="selected";
         assert(a.equals("") );
+    }
+    @Test
+    public void passwordButton(WebDriver driver) throws InterruptedException {
+        System.out.println("please enter your username and password");
+        Scanner scanner= new Scanner(System.in);
+        String username= scanner.nextLine();
+        String password= scanner.nextLine();
+        driver.findElement(By.id("ap_email")).sendKeys(username);
+        driver.findElement(By.id("continue")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("ap_password")).sendKeys(password);
+        Thread.sleep(200);
+        driver.findElement(By.id("signInSubmit")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("nav-hamburger-menu")).click();
+        driver.findElement(By.id("hmenu-customer-profile-link")).click();
+        driver.findElement(By.xpath("//*[@id=\"a-page\"]/div[2]/div/div[3]/div[1]/a")).click();
+        driver.findElement(By.id("ya-myab-address-add-link")).click();
     }
 }
