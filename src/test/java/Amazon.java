@@ -63,6 +63,7 @@ public class Amazon {
         driver.findElement(By.id("signInSubmit")).click();
         Thread.sleep(2000);
         driver.findElement(By.id("nav-hamburger-menu")).click();
+        Thread.sleep(200);
         driver.findElement(By.id("hmenu-customer-profile-link")).click();
         driver.findElement(By.xpath("//*[@id=\"a-page\"]/div[2]/div/div[3]/div[1]/a")).click();
         driver.findElement(By.id("ya-myab-address-add-link")).click();
