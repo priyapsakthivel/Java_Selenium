@@ -1,6 +1,7 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -45,4 +46,18 @@ public class MyFirstTest {
         productSearchEl.sendKeys("EOS R");
         productSearchEl.sendKeys(Keys.ENTER);
     }
+    @Test
+   public void searchbox() throws InterruptedException {
+        WebDriver driver= new EdgeDriver();
+       WebElement searchbox = driver.findElement(By.id("twotabsearchtextbox"));
+       searchbox.sendKeys("samsunglevelu");
+       searchbox.sendKeys(Keys.ENTER);
+       Thread.sleep(2000);
+       WebElement productChoice = driver.findElement(By.xpath("//*[@id=\"a-autoid-0-announce\"]/span[2]"));
+       productChoice.click();
+       Thread.sleep(2000);
+
+       Select list = new Select(driver.findElement(By.id("s-result-sort-select")));
+       list.selectByValue("price-asc-rank");
+   }
 }
