@@ -30,7 +30,7 @@ public class Instagram {
         WebElement userName = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[1]/div/label/input"));
         userName.sendKeys("******");
         WebElement password = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[2]/div/label/input"));
-        password.sendKeys("*******");
+        password.sendKeys("******");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[3]/button")).click();
         return driver;
