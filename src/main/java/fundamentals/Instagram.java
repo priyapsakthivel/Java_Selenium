@@ -11,7 +11,9 @@ import java.util.Scanner;
 public class Instagram {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner= new Scanner(System.in);
+        System.out.println("please enter your user name");
         String userNameInput=scanner.next();
+        System.out.println("please enter your password");
         String passwordInput=scanner.next();
         Instagram instagram = new Instagram();
         WebDriver credentials = instagram.browserLaunch();
