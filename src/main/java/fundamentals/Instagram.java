@@ -39,9 +39,12 @@ public class Instagram {
         password.sendKeys(passwordInput);
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[3]/button")).click();
+        Thread.sleep(2000);
     }
     public void home(WebDriver driver) throws InterruptedException {
-        WebElement turnOfNotification=driver.findElement(By.xpath("///*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[1]/div/a"));
+        driver.findElement(By.xpath("/html/body/div[1]/section/main/div/div/div/div/button")).click();
+        Thread.sleep(2000);
+        WebElement turnOfNotification=driver.findElement(By.xpath("/html/body/div[4]/div/div/div/div[3]/button[2]"));
         turnOfNotification.click();
         Thread.sleep(2000);
     }
