@@ -22,12 +22,14 @@ public class Instagram {
         }
         @Test
         public void login(WebDriver driver, String userNameInput, String passwordInput) throws InterruptedException {
+
             WebElement userName = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[1]/div/label/input"));
             userName.sendKeys(userNameInput);
             WebElement password = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[2]/div/label/input"));
             password.sendKeys(passwordInput);
             Thread.sleep(2000);
             driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[3]/button")).click();
+            Thread.sleep(2000);
         }
         @Test
         public void home(WebDriver driver) throws InterruptedException {
