@@ -32,7 +32,7 @@ public class Instagram {
             Thread.sleep(2000);
         }
         @Test
-        public void home(WebDriver driver) throws InterruptedException {
+        public void home(WebDriver driver) throws InterruptedException {  //notifications
             WebElement turnOfNotification=driver.findElement(By.xpath("///*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[1]/div/a"));
             turnOfNotification.click();
             Thread.sleep(2000);
@@ -40,7 +40,7 @@ public class Instagram {
         @Test
         public void like(WebDriver driver){
             WebElement favourite=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
-            favourite.click();
+            favourite.click();                         //favourites
         }
 
     }
