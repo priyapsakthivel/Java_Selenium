@@ -9,7 +9,7 @@ import java.io.File;
 
 public class Testing {
     public static void main(String[] args) {
-        File file = new File("P:/Webdrivers/edgedriver.exe");
+        File file = new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         Testing test = new Testing();
         WebDriver driver=test.openBrowser();

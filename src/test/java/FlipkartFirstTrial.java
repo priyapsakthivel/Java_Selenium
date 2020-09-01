@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class FlipkartFirstTrial {
     @BeforeTest
     public WebDriver browser(){
-        File file = new File("P:/Webdrivers/edgedriver.exe");
+        File file = new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver driver= new EdgeDriver();
         driver.get("https://www.flipkart.com/");

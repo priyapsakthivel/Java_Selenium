@@ -16,7 +16,7 @@ public class SeleniumTwoInputFields {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
 
-        File file= new File("P:/Webdrivers/edgedriver.exe");
+        File file= new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
 
         WebDriver webDriver= new EdgeDriver();

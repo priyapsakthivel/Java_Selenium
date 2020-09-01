@@ -12,7 +12,7 @@ public class HotstarProgramSearch {
         Scanner scanner =new Scanner(System.in);
         String program = scanner.nextLine();
 
-        File file = new File("P:/Webdrivers/edgedriver.exe");
+        File file = new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
 
         WebDriver webDriver= new EdgeDriver();
