@@ -16,7 +16,7 @@ public class MyFirstTest {
 
     @BeforeTest
     public void initializeDriver(){
-        File file = new File("P:/Webdrivers/edgedriver.exe");
+        File file = new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.setCapability("headless","true");

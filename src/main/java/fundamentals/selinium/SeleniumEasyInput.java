@@ -11,7 +11,7 @@ import java.io.File;
 public class SeleniumEasyInput {
     public static void main(String [] args) throws InterruptedException {
         String input_text = "have a good day";
-        File file =new File("P:/Webdrivers/edgedriver.exe");
+        File file =new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver webDriver= new EdgeDriver();
         JavascriptExecutor jse = (JavascriptExecutor)webDriver;

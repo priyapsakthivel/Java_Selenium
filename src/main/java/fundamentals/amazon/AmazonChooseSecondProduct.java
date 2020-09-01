@@ -12,7 +12,7 @@ public class AmazonChooseSecondProduct {
         Scanner scanner= new Scanner(System.in);
         System.out.println("please enter the product you are searching");
         String search=scanner.next();
-        File file= new File("P:/Webdrivers/edgedriver.exe");
+        File file= new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
 
         WebDriver driver =new EdgeDriver();

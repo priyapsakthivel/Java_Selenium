@@ -11,7 +11,7 @@ import java.util.List;
 
 public class AmazonProductSortBy {
     public static void main(String[] args) throws InterruptedException {
-        File file= new File("P:/Webdrivers/edgedriver.exe");
+        File file= new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
 
         WebDriver webDriver=new EdgeDriver();

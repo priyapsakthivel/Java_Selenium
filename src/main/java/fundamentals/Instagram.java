@@ -23,10 +23,10 @@ public class Instagram {
     }
 
     public WebDriver browserLaunch(){
-        File file = new File("P:/Webdrivers/edgedriver.exe");
+        File file = new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
         WebDriver driver = new EdgeDriver();
-        driver.get("https://www.instagram.com/");
+        driver.get("https://www.instagram.com");
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[1]/div/label/input"));
         return driver;

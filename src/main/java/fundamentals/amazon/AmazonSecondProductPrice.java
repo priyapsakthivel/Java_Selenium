@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class AmazonSecondProductPrice {
     public static void main(String[] args) throws InterruptedException {
 
-        File file= new File("P:/Webdrivers/edgedriver.exe");
+        File file= new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver driver= new EdgeDriver();
         driver.get("https://www.amazon.in/");
