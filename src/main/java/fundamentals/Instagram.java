@@ -1,6 +1,7 @@
 package fundamentals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -20,6 +21,7 @@ public class Instagram {
         instagram.login (credentials,userNameInput,passwordInput);
         instagram.home(credentials);
         instagram.like(credentials);
+        instagram.search(credentials);
     }
 
     public WebDriver browserLaunch(){
@@ -39,24 +41,26 @@ public class Instagram {
         password.sendKeys(passwordInput);
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[3]/button")).click();
-        Thread.sleep(2000);
+        Thread.sleep(10000);
     }
     public void home(WebDriver driver) throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[1]/section/main/div/div/div/div/button")).click();
+        driver.findElement(By.xpath("//*[@id='react-root']/section/main/div/div/div/div/button")).click();
         Thread.sleep(2000);
         WebElement turnOfNotification=driver.findElement(By.xpath("/html/body/div[4]/div/div/div/div[3]/button[2]"));
         turnOfNotification.click();
         Thread.sleep(200);
     }
-    public void like(WebDriver driver){
+    public void like(WebDriver driver) throws InterruptedException {
         WebElement favourite=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
         favourite.click();
-
-
+        Thread.sleep(200);
+    }
+    public void search(WebDriver driver) throws InterruptedException {
+        WebElement searchInput=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[2]/input"));
+        searchInput.sendKeys("#BW");
+        searchInput.sendKeys(Keys.ENTER);
+        Thread.sleep(2000);
+        searchInput.sendKeys(Keys.ENTER);
 
     }
-
-
-
-
 }
