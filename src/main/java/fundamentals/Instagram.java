@@ -46,20 +46,20 @@ public class Instagram {
     public void home(WebDriver driver) throws InterruptedException {
         driver.findElement(By.xpath("//*[@id='react-root']/section/main/div/div/div/div/button")).click();
         Thread.sleep(2000);
-        WebElement turnOfNotification=driver.findElement(By.xpath("/html/body/div[4]/div/div/div/div[3]/button[2]"));
+        WebElement turnOfNotification=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
         turnOfNotification.click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
     }
     public void like(WebDriver driver) throws InterruptedException {
-        WebElement favourite=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
+        WebElement favourite=driver.findElement(By.xpath("/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
         favourite.click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
     }
     public void search(WebDriver driver) throws InterruptedException {
         WebElement searchInput=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[2]/input"));
         searchInput.sendKeys("#BW");
         searchInput.sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         searchInput.sendKeys(Keys.ENTER);
 
     }
