@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -37,9 +38,16 @@ public class Instagram {
             Thread.sleep(2000);
         }
         @Test
-        public void like(WebDriver driver){
-            WebElement favourite=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
-            favourite.click();                         //favourites
-        }
-
-    }
+        public void like(WebDriver driver) throws InterruptedException {
+        WebElement favourite=driver.findElement(By.xpath("/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/a"));
+        favourite.click();
+        Thread.sleep(2000);
+         }
+         @Test
+        public void search(WebDriver driver) throws InterruptedException {
+        WebElement searchInput=driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/nav/div[2]/div/div/div[2]/input"));
+        searchInput.sendKeys("#BW");
+        searchInput.sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+        searchInput.sendKeys(Keys.ENTER);
+        }}
