@@ -27,10 +27,12 @@ public class Swiggy {
     public void SwiggyLogin(WebDriver webDriver) throws InterruptedException {
         webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div[1]/div/div[1]/div[1]/div/div[1]/div/a[1]")).click();
         Thread.sleep(2000);
-        webDriver.findElement(By.id("mobile")).sendKeys("9080442336");
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("please enter your mobile number");
+        String mobileNumber= scanner.next();
+        webDriver.findElement(By.id("mobile")).sendKeys(mobileNumber);
         webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div/form/div[2]/a")).click();
         Thread.sleep(200);
-        Scanner scanner= new Scanner(System.in);
         System.out.println("please enter your otp");
         String otp= scanner.next();
         webDriver.findElement(By.id("otp")).sendKeys(otp);
