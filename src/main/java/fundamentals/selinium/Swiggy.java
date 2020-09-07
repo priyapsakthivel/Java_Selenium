@@ -15,8 +15,10 @@ public class Swiggy {
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         Swiggy obj= new Swiggy();
         WebDriver webDriver=obj.swiggyLaunch();
+        JavascriptExecutor jse =(JavascriptExecutor)webDriver;
         obj.SwiggyLogin(webDriver);
-        obj.premium(webDriver);
+        obj.premium(webDriver,jse);
+        obj.moreAddress(webDriver,jse);
     }
     public WebDriver swiggyLaunch(){
         WebDriver driver = new EdgeDriver();
@@ -40,15 +42,22 @@ public class Swiggy {
         webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div/div[2]/form/div[2]/div[2]/a")).click();
         Thread.sleep(2000);
     }
-    public void premium(WebDriver webDriver) throws InterruptedException {
-        JavascriptExecutor jse =(JavascriptExecutor)webDriver;
+    public WebDriver premium(WebDriver webDriver, JavascriptExecutor jse) throws InterruptedException {
+
         jse.executeScript("scrollTo(0,500)");
         webDriver.findElement(By.xpath("//*[@id=\"open_filter\"]/div/div/div[1]/div/div/div/div/div[1]/a[2]/div")).click();
         Thread.sleep(2000);
         webDriver.findElement(By.xpath("//*[@id=\"filter_11709\"]/div[2]/div[1]/div[1]/a")).click();
-        ArrayList<String> tab = new ArrayList<String>(webDriver.getWindowHandles());
-        webDriver.switchTo().window(tab.get(2));
+        /*ArrayList<String> tab = new ArrayList<String>(webDriver.getWindowHandles());
+        webDriver.switchTo().window(tab.get(2));*/
         Thread.sleep(2000);
         webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div[1]/div[1]/div[3]/div[2]/div/div/div[1]/span[1]")).click();
+        return webDriver;
+    }
+    public void moreAddress(WebDriver webDriver, JavascriptExecutor jse){
+        webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/header/div/div/div/span[3]")).click();
+        jse.executeScript("scrollTo(0,200)");
+        webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div[3]/div/div[3]/div[3]")).click();
+        webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div[3]/div/div[3]/div[2]/div[3]")).click();
     }
 }
