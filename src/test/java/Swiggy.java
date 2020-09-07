@@ -5,10 +5,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Swiggy {
+
     @BeforeTest
     public WebDriver swiggyLaunch(){
         WebDriver driver = new EdgeDriver();
@@ -34,16 +34,21 @@ public class Swiggy {
         Thread.sleep(2000);
     }
     @Test
-    public void premium(WebDriver webDriver) throws InterruptedException {
+    public WebDriver premium(WebDriver webDriver) throws InterruptedException {
         JavascriptExecutor jse =(JavascriptExecutor)webDriver;
         jse.executeScript("scrollTo(0,500)");
         webDriver.findElement(By.xpath("//*[@id=\"open_filter\"]/div/div/div[1]/div/div/div/div/div[1]/a[2]/div")).click();
         Thread.sleep(2000);
         webDriver.findElement(By.xpath("//*[@id=\"filter_11709\"]/div[2]/div[1]/div[1]/a")).click();
-        ArrayList<String> tab = new ArrayList<String>(webDriver.getWindowHandles());
-        webDriver.switchTo().window(tab.get(2));
         Thread.sleep(2000);
         webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div[1]/div[1]/div[3]/div[2]/div/div/div[1]/span[1]")).click();
+        return webDriver;
+    }@Test
+    public void moreAddress(WebDriver webDriver, JavascriptExecutor jse){
+        webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/header/div/div/div/span[3]")).click();
+        jse.executeScript("scrollTo(0,200)");
+        webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div[3]/div/div[3]/div[3]")).click();
+        webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div[3]/div/div[3]/div[2]/div[3]")).click();
     }
 }
 
