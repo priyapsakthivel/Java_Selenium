@@ -54,9 +54,10 @@ public class Swiggy {
         webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div[1]/div[1]/div[3]/div[2]/div/div/div[1]/span[1]")).click();
         return webDriver;
     }
-    public void moreAddress(WebDriver webDriver, JavascriptExecutor jse){
+    public void moreAddress(WebDriver webDriver, JavascriptExecutor jse) throws InterruptedException {
         webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/header/div/div/div/span[3]")).click();
         jse.executeScript("scrollTo(0,200)");
+        Thread.sleep(2000);
         webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div[3]/div/div[3]/div[3]")).click();
         webDriver.findElement(By.xpath("//*[@id=\"overlay-sidebar-root\"]/div/div/div[2]/div/div/div[3]/div/div[3]/div[2]/div[3]")).click();
     }
