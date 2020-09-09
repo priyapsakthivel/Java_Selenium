@@ -8,7 +8,10 @@ public class Oddeven {
         System.out.println("please enter any number to check if its even or odd");
         int number=scanner.nextInt();
         Oddeven oddeven= new Oddeven();
-        if(number%2==0){
+        if(number==0){
+            System.out.println(" number is  neither even or odd");
+        }
+        else if(number%2==0){
         oddeven.even();
         }
         else{
