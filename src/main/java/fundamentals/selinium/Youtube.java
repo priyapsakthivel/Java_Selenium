@@ -18,5 +18,6 @@ public class Youtube {
         driver.get("https://www.youtube.com/");
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//*[@id=\"buttons\"]/ytd-button-renderer/a"));
+        driver.quit();
     }
 }
