@@ -17,7 +17,6 @@ public class Youtube {
         WebDriver driver= new EdgeDriver();
         driver.get("https://www.youtube.com/");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("//*[@id=\"buttons\"]/ytd-button-renderer/a"));
-        driver.quit();
+        driver.findElement(By.id("thumbnail")).click();
     }
 }
