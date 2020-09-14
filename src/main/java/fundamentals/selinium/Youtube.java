@@ -8,15 +8,21 @@ import java.io.File;
 
 public class Youtube {
     public static void main(String[] args) {
-    Youtube youtube= new Youtube();
-    youtube.launch();
-    }
-    public void launch(){
         File file = new File("P:/Webdrivers/msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
+        Youtube youtube= new Youtube();
+        WebDriver launch =youtube.launch();
+        youtube.thumbnailAccess(launch);
+    }
+    public WebDriver launch(){
         WebDriver driver= new EdgeDriver();
         driver.get("https://www.youtube.com/");
         driver.manage().window().maximize();
-        driver.findElement(By.id("thumbnail")).click();
+        return launch();
     }
+    public WebDriver thumbnailAccess(WebDriver launch){
+        launch.findElement(By.id("thumbnail")).click();
+        return launch();
+    }
+
 }
