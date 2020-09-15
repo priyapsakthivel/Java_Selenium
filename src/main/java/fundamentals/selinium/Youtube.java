@@ -20,9 +20,13 @@ public class Youtube {
         driver.manage().window().maximize();
         return launch();
     }
-    public WebDriver thumbnailAccess(WebDriver launch){
+    public WebDriver thumbnailAccess(WebDriver launch) throws InterruptedException {
         launch.findElement(By.id("thumbnail")).click();
+        Thread.sleep(20000);
+        launch.quit();
         return launch();
+
+
     }
 
 }
