@@ -24,7 +24,9 @@ public class Youtube {
         launch.findElement(By.id("thumbnail")).click();
         Thread.sleep(20000);
         launch.quit();
+        Thread.sleep(20000);
         return launch();
+
 
 
     }
