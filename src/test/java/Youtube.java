@@ -1,7 +1,9 @@
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
@@ -20,6 +22,13 @@ public class Youtube {
     public WebDriver thumbnailAccess(WebDriver driver) throws InterruptedException {
         driver.findElement(By.id("thumbnail")).click();
         Thread.sleep(20000);
+        return launch();
+    }
+    @Test
+    public WebDriver search(WebDriver driver){
+        WebElement search=driver.findElement(By.id("search"));
+        search.sendKeys("Khedharnath songs");
+        search.sendKeys(Keys.ENTER);
         return launch();
     }
 }
