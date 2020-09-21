@@ -1,26 +1,19 @@
-package fundamentals.selinium;
-
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import java.io.File;
 import java.util.Scanner;
 
 public class Whitehatjr {
-    public static void main(String[]args) throws InterruptedException {
-        File file= new File("P:/Webdrivers/msedgedriver.exe");
-        System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
-      Whitehatjr obj= new Whitehatjr();
-      WebDriver website =obj.launch();
-      obj.fill(website);
-    }
+    @Test
     public WebDriver launch(){
         WebDriver driver= new EdgeDriver();
         driver.get("https://code.whitehatjr.com/trial/register?utm_source=Google_India_Search&utm_campaign=Sok_Whitehat_Search_Brand_Exact&utm_content=87393542122&utm_term=434998326935&gclid=EAIaIQobChMI_bqYnp346wIVwtaWCh1yuQTYEAAYASAAEgL86fD_BwE");
         driver.manage().window().maximize();
         return driver;
     }
+    @Test
     public void fill(WebDriver website) throws InterruptedException {
         Scanner scanner= new Scanner(System.in);
         System.out.println("please enter email id");
@@ -33,3 +26,4 @@ public class Whitehatjr {
         Thread.sleep(2000);
     }
 }
+
