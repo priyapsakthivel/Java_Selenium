@@ -25,11 +25,20 @@ public class Whitehatjr {
         Scanner scanner= new Scanner(System.in);
         System.out.println("please enter email id");
         String email =scanner.next();
-        System.out.println("please enter parentname");
-        String parentname =scanner.next();
         website.findElement(By.id("email")).sendKeys(email);
         Thread.sleep(2000);
+        System.out.println("please enter parentname");
+        String parentname =scanner.next();
         website.findElement(By.id("parentName")).sendKeys(parentname);
         Thread.sleep(2000);
+        System.out.println("please enter phoneNumber");
+        String phoneNumber =scanner.next();
+        website.findElement(By.id("mobile")).sendKeys(phoneNumber);
+        Thread.sleep(2000);
+        System.out.println("please enter studentName");
+        String studentName =scanner.next();
+        website.findElement(By.id("studentName")).sendKeys(studentName);
+        Thread.sleep(2000);
     }
+
 }
