@@ -3,6 +3,7 @@ package fundamentals.selinium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.util.Scanner;
@@ -39,6 +40,10 @@ public class Whitehatjr {
         String studentName =scanner.next();
         website.findElement(By.id("studentName")).sendKeys(studentName);
         Thread.sleep(2000);
+        Select select= new Select(website.findElement(By.id("grade")));
+        select.selectByValue("3");
+        Thread.sleep(2000);
+
     }
 
 }
