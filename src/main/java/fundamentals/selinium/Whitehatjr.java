@@ -1,6 +1,7 @@
 package fundamentals.selinium;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -15,6 +16,7 @@ public class Whitehatjr {
       Whitehatjr obj= new Whitehatjr();
       WebDriver website =obj.launch();
       obj.fill(website);
+      obj.secondHalf(website);
     }
     public WebDriver launch(){
         WebDriver driver= new EdgeDriver();
@@ -40,10 +42,13 @@ public class Whitehatjr {
         String studentName =scanner.next();
         website.findElement(By.id("studentName")).sendKeys(studentName);
         Thread.sleep(2000);
+    }
+    public void secondHalf(WebDriver website) throws InterruptedException {
+        JavascriptExecutor jse= (JavascriptExecutor)website;
+        jse.executeScript("scrollTo(0,500)");
         Select select= new Select(website.findElement(By.id("grade")));
         select.selectByValue("3");
         Thread.sleep(2000);
-
     }
 
 }
