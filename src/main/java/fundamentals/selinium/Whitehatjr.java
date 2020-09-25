@@ -46,9 +46,12 @@ public class Whitehatjr {
     public void secondHalf(WebDriver website) throws InterruptedException {
         JavascriptExecutor jse= (JavascriptExecutor)website;
         jse.executeScript("scrollTo(0,500)");
-        Select select= new Select(website.findElement(By.id("grade")));
-        select.selectByValue("3");
+//        Select select= new Select(website.findElement(By.id("grade")));
+//        select.selectByValue("1");
+        website.findElement(By.xpath("//*[@id=\"grade\"]/label[1]/span[1]/span[1]/input")).click();
         Thread.sleep(2000);
+
     }
+
 
 }
