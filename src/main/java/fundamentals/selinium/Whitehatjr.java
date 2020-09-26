@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Whitehatjr {
     public static void main(String[]args) throws InterruptedException {
-        File file= new File("P:/Webdrivers/msedgedriver.exe");
+        File file= new File("P:/Webdrivers/MicrosoftWebDriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
       Whitehatjr obj= new Whitehatjr();
       WebDriver website =obj.launch();
@@ -50,7 +50,10 @@ public class Whitehatjr {
 //        select.selectByValue("1");
         website.findElement(By.xpath("//*[@id=\"grade\"]/label[1]/span[1]/span[1]/input")).click();
         Thread.sleep(2000);
-
+        website.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[1]/div/div/div/div/div[2]/div/div[2]/div[2]/div")).click();
+        Thread.sleep(2000);
+        website.findElement(By.xpath("//*[@id=\"isLaptop\"]/label[1]/span[1]/span[1]/input")).click();
+        Thread.sleep(2000);
     }
 
 
