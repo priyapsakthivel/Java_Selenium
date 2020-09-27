@@ -50,11 +50,11 @@ public class Whitehatjr {
 //        select.selectByValue("1");
         website.findElement(By.xpath("//*[@id=\"grade\"]/label[1]/span[1]/span[1]/input")).click();
         Thread.sleep(2000);
-        website.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[1]/div/div/div/div/div[2]/div/div[2]/div[2]/div")).click();
+        website.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div[2]/div/div[2]/div[2]/form/fieldset[2]/div/label[1]/span[1]/span[1]/input")).click();
         Thread.sleep(2000);
         website.findElement(By.xpath("//*[@id=\"isLaptop\"]/label[1]/span[1]/span[1]/input")).click();
         Thread.sleep(2000);
+        website.quit();
+
     }
-
-
 }
