@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Bootstrap {
-    public static void main(String[]args) {
+    public static void main(String[]args) throws InterruptedException {
         Bootstrap bootstrap= new Bootstrap();
         WebDriver launching=bootstrap.launch();
         bootstrap.maximize(launching);
@@ -22,10 +22,11 @@ public class Bootstrap {
         webDriver.get("https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html");
         return webDriver;
     }
-    public WebDriver maximize(WebDriver launching){
+    public WebDriver maximize(WebDriver launching) throws InterruptedException {
         launching.manage().window().maximize();
         launching.findElement(By.id("autoclosable-btn-success")).click();
         String  text =launching.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div[1]")).getText();
+        Thread.sleep(2000);
         System.out.println(text);
         return launching;
     }
