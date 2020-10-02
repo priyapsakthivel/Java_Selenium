@@ -21,10 +21,11 @@ public class BootstrapModal {
         driver.manage().window().maximize();
         return driver;
     }
-    public void singleModal(WebDriver website){
+    public void singleModal(WebDriver website) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a")).click();
         String singleModal =website.findElement(By.xpath("//*[@id=\"myModal0\"]/div/div/div[3]")).getText();
+        Thread.sleep(2000);
         System.out.println("message displayed in screen was: "+singleModal);
         System.out.println("please choose any option '1'for close & '2' for savechanges");
         String single =scanner.next();
