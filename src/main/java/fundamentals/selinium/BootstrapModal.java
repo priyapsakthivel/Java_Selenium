@@ -15,6 +15,7 @@ public class BootstrapModal {
         BootstrapModal bootstrapModal = new BootstrapModal();
         WebDriver website =bootstrapModal.launch();
         bootstrapModal.singleModal(website);
+        bootstrapModal.multipleModal(website);
     }
     public WebDriver launch(){
         WebDriver driver= new EdgeDriver();
@@ -28,24 +29,18 @@ public class BootstrapModal {
         String singleModal =website.findElement(By.xpath("//*[@id=\"myModal0\"]/div/div/div[3]")).getText();
         Thread.sleep(2000);
         System.out.println("message displayed in screen was: "+singleModal);
-        System.out.println("please choose any option '1'for close & '2' for savechanges");
-        int single =scanner.nextInt();
-
-        if(single==1){
-            website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div/div[4]/a[1]")).click();
-        }
-        else if(single==2){
-            website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div/div[4]/a[2]")).click();
-        }
+        website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div/div[4]/a[2]")).click();
        Thread.sleep(20000);
     }
-    public void multipleModal(WebDriver website){
-        JavascriptExecutor javascriptExecutor = new JavascriptExecutor() {
-        }
-        website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a")).click();
-        String singleModal =website.findElement(By.xpath("//*[@id=\"myModal0\"]/div/div/div[3]")).getText();
+    public void multipleModal(WebDriver website) throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor)website;
+        javascriptExecutor.executeScript("scrollTo(0,200)");
         Thread.sleep(2000);
-        System.out.println("message displayed in screen was: "+singleModal);
+        website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/div/div[2]/a")).click();
+        String multipleModal =website.findElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[3]/a")).getText();
+        Thread.sleep(2000);
+        System.out.println("message displayed in screen was: "+ multipleModal);
         System.out.println("please choose any option '1'for close & '2' for savechanges");
         int single =scanner.nextInt();
 
@@ -56,4 +51,4 @@ public class BootstrapModal {
             website.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div/div[4]/a[2]")).click();
         }
 
-}
+}}
