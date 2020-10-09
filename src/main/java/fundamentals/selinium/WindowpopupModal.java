@@ -12,9 +12,10 @@ public class WindowpopupModal {
         WindowpopupModal windowpopupModal= new WindowpopupModal();
         windowpopupModal.singleWindowPopup();
     }
-    public  void singleWindowPopup(){
+    public  void singleWindowPopup() throws InterruptedException {
         WebDriver driver= new EdgeDriver();
         driver.get("P:/Webdrivers/msedgedriver.exe");
         driver.manage().window().maximize();
+        Thread.sleep(2000);
     }
 }
