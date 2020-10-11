@@ -14,7 +14,7 @@ public class WindowpopupModal {
     }
     public  void singleWindowPopup() throws InterruptedException {
         WebDriver driver= new EdgeDriver();
-        driver.get("P:/Webdrivers/msedgedriver.exe");
+        driver.get("https://www.seleniumeasy.com/test/window-popup-modal-demo.html");
         driver.manage().window().maximize();
         Thread.sleep(2000);
     }
