@@ -21,7 +21,7 @@ public class Flipkart {
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).sendKeys("poiuytf");
         Thread.sleep(2000);
-
+        driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button")).click();
     }
 
 }
