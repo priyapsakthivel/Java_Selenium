@@ -12,9 +12,10 @@ public class Flipkart {
         File file= new File("P:\\Webdrivers\\msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         Flipkart flipkart= new Flipkart();
-        flipkart.flipkartGrocery();
+        WebDriver login = flipkart.flipkartGrocery();
+        flipkart.search(login);
     }
-    public void flipkartGrocery() throws InterruptedException {
+    public WebDriver flipkartGrocery() throws InterruptedException {
         Scanner scanner= new Scanner(System.in);
         System.out.println("please enter your email id");
         String emailId =scanner.next();
@@ -29,6 +30,10 @@ public class Flipkart {
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button")).click();
         Thread.sleep(2000);
+        return driver;
+    }
+    public void search(WebDriver login){
+        login.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")).sendKeys();
     }
 
 }
