@@ -32,8 +32,10 @@ public class Flipkart {
         Thread.sleep(2000);
         return driver;
     }
-    public void search(WebDriver login){
+    public void search(WebDriver login) throws InterruptedException {
+
         login.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")).sendKeys();
+        Thread.sleep(2000);
     }
 
 }
