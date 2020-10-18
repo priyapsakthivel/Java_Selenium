@@ -22,5 +22,7 @@ public void skiplogin() throws InterruptedException {
     driver.manage().window().maximize();
     Thread.sleep(2000);
     driver.findElement(By.xpath("/html/body/div[2]/div/div/button")).click();
+    Thread.sleep(200);
+    driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[2]/div/div/span[1]")).click();
 }
 }
