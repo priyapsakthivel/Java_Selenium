@@ -1,29 +1,36 @@
 package amazonMethodpractice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
 
 public class Hotstar {
-    public static void main(String[]args){
+    public static void main(String[]args) throws InterruptedException {
         File file = new File("P:\\Webdrivers\\msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         Hotstar hotstar = new Hotstar();
         WebDriver launch=hotstar.hotStarLaunch();
-        hotstar.hotstarLogin(launch);
+        hotstar.kids(launch);
+        hotstar.kidsSeries(launch);
     }
     public WebDriver hotStarLaunch(){
         WebDriver driver= new EdgeDriver();
         driver.get("https://www.hotstar.com/in");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[1]/div[1]/div/div[2]/div/div[5]/div")).click();
-
         return driver;
     }
-    public WebDriver hotstarLogin(WebDriver launch){
-
+    public WebDriver kids(WebDriver launch) throws InterruptedException {
+        launch.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div/div[3]/ul/li[7]/div")).click();
+        Thread.sleep(200);
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor)hotStarLaunch();
+        javascriptExecutor.executeScript("scrollTo(0,500)");
+        return launch;
+    }
+    public WebDriver kidsSeries(WebDriver launch) throws InterruptedException {
+        launch.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/article/a/div[1]/div")).click();
         return launch;
     }
 }
