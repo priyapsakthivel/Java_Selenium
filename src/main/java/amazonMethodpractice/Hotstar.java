@@ -13,8 +13,8 @@ public class Hotstar {
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         Hotstar hotstar = new Hotstar();
         WebDriver launch=hotstar.hotStarLaunch();
-        hotstar.kids(launch);
-        hotstar.kidsSeries(launch);
+        WebDriver kidsChoise=hotstar.kids(launch);
+        hotstar.kidsSeries(kidsChoise);
     }
     public WebDriver hotStarLaunch(){
         WebDriver driver= new EdgeDriver();
@@ -29,8 +29,10 @@ public class Hotstar {
         javascriptExecutor.executeScript("scrollTo(0,500)");
         return launch;
     }
-    public WebDriver kidsSeries(WebDriver launch) throws InterruptedException {
-        launch.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/article/a/div[1]/div")).click();
-        return launch;
+    public WebDriver kidsSeries(WebDriver kidsChoise)  {
+        kidsChoise.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/article/a/div[1]/div")).click();
+        JavascriptExecutor jse=(JavascriptExecutor)kidsSeries(kidsChoise);
+        jse.executeScript("scrollTo(0,500)");
+        return kidsSeries(kidsChoise);
     }
 }
