@@ -13,8 +13,6 @@ public class Hotstar {
     public void drive (){
         amazonMethodpractice.Hotstar hotstar = new amazonMethodpractice.Hotstar();
         WebDriver launch=hotstar.hotStarLaunch();
-        WebDriver kidsChoise=hotstar.kids(launch);
-        hotstar.kidsSeries(launch);
     }
     @BeforeTest
     public WebDriver hotStarLaunch(){
