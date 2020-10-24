@@ -32,11 +32,13 @@ public class Hotstar {
         return launch;
     }
     @Test
-    public WebDriver kidsSeries(WebDriver launch)  {
+    public WebDriver kidsSeries(WebDriver launch) throws InterruptedException {
         launch.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/article/a/div[1]/div")).click();
         JavascriptExecutor jse=(JavascriptExecutor)kidsSeries(launch);
         jse.executeScript("scrollTo(0,500)");
+        Thread.sleep(2000);
         return kidsSeries(launch);
+
     }
 }
 
