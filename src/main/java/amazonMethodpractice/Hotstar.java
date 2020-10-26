@@ -36,4 +36,5 @@ public class Hotstar {
         Thread.sleep(2000);
         return kidsSeries(launch);
     }
+
 }
