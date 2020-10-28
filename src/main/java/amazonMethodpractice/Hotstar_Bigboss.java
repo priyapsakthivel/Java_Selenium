@@ -31,7 +31,7 @@ public class Hotstar_Bigboss {
         return hotstar(launch);
     }
     public WebDriver choose_Thumbnail(){
-        hotstar_Launch().findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/div/article/a/div[1]")).click();
+        hotstar_Launch().findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/div/article/a/div[2]")).click();
 
 
        return choose_Thumbnail();
