@@ -32,7 +32,6 @@ public class Hotstar_Bigboss {
     }
     public WebDriver choose_Thumbnail() throws InterruptedException {
         hotstar_Launch().findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/div/article/a/div[2]")).click();
-
         Thread.sleep(2000);
        return choose_Thumbnail();
     }
