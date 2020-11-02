@@ -13,7 +13,7 @@ public class All_the_Best {
             return i++ ; }
         }
         return a;}
-    {for(int j= 1;j<=10;j--){
+    {for(int j= 1;j<=10;j++){
             System.out.println("u are doing great");
         }
     }
