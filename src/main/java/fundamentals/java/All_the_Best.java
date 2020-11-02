@@ -12,6 +12,9 @@ public class All_the_Best {
             else{System.out.println("do ur best");
             return i++ ; }
         }
-        return a;
+        return a;}
+    {for(int j= 1;j<=10;j++){
+            System.out.println("u are doing great");
+        }
     }
 }
