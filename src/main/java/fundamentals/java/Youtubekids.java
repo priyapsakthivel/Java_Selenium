@@ -10,10 +10,15 @@ public class Youtubekids {
         File file = new File("P:\\Webdrivers\\msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         Youtubekids youtubekids= new Youtubekids();
-        youtubekids.launch();
+        WebDriver webDriver =youtubekids.launch();
+        youtubekids.fullscreen(webDriver);
     }
-    public void launch(){
+    public WebDriver launch(){
         WebDriver driver= new EdgeDriver();
         driver.get("https://www.youtubekids.com/");
+        return driver;
+    }
+    public void fullscreen(WebDriver webDriver){
+        webDriver.manage().window().maximize();
     }
 }
