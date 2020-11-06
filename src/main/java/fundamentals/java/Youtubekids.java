@@ -18,7 +18,8 @@ public class Youtubekids {
         driver.get("https://www.youtubekids.com/");
         return driver;
     }
-    public void fullscreen(WebDriver webDriver){
+    public void fullscreen(WebDriver webDriver) throws InterruptedException {
         webDriver.manage().window().maximize();
+        Thread.sleep(2000);
     }
 }
