@@ -1,5 +1,6 @@
 package fundamentals.java;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -12,6 +13,7 @@ public class Youtubekids {
         Youtubekids youtubekids= new Youtubekids();
         WebDriver webDriver =youtubekids.launch();
         youtubekids.fullscreen(webDriver);
+        youtubekids.parent(webDriver);
     }
     public WebDriver launch(){
         WebDriver driver= new EdgeDriver();
@@ -21,5 +23,14 @@ public class Youtubekids {
     public void fullscreen(WebDriver webDriver) throws InterruptedException {
         webDriver.manage().window().maximize();
         Thread.sleep(2000);
+    }
+    public void parent(WebDriver webDriver) throws InterruptedException {
+        webDriver.findElement(By.id("parent-button")).click();
+        Thread.sleep(2000);
+        webDriver.findElement(By.id("next-button")).click();
+        Thread.sleep(2000);
+        webDriver.findElement(By.id("digits-input")).sendKeys("1997");
+        webDriver.findElement(By.id("submit-button")).click();
+
     }
 }
