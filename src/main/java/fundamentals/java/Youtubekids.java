@@ -31,7 +31,7 @@ public class Youtubekids {
         Thread.sleep(2000);
         webDriver.findElement(By.id("digits-input")).sendKeys("1997");
         webDriver.findElement(By.id("submit-button")).click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
 
     }
 }
