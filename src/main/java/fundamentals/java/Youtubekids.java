@@ -38,9 +38,9 @@ public class Youtubekids {
         webDriver.findElement(By.id("onboarding-age-gate-digit-2")).sendKeys("9");
         webDriver.findElement(By.id("onboarding-age-gate-digit-3")).sendKeys("9");
         webDriver.findElement(By.id("onboarding-age-gate-digit-4")).sendKeys("1");
-        Thread.sleep(2000);
+        Thread.sleep(6000);
         webDriver.findElement(By.id("submit-button")).click();
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
     }}
 
