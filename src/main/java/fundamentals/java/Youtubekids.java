@@ -30,17 +30,22 @@ public class Youtubekids {
         Thread.sleep(5000);
         webDriver.findElement(By.id("next-button")).click();
         Thread.sleep(5000);
-        webDriver.findElement(By.id("digits-input")).sendKeys("1997");
-
     }
     public void hi_Parents(WebDriver webDriver) throws InterruptedException {
         webDriver.findElement(By.id("onboarding-age-gate-digit-1")).sendKeys("1");
-        webDriver.findElement(By.id("onboarding-age-gate-digit-2")).sendKeys("9");
-        webDriver.findElement(By.id("onboarding-age-gate-digit-3")).sendKeys("9");
-        webDriver.findElement(By.id("onboarding-age-gate-digit-4")).sendKeys("1");
-        Thread.sleep(6000);
-        webDriver.findElement(By.id("submit-button")).click();
         Thread.sleep(2000);
+
+        webDriver.findElement(By.id("onboarding-age-gate-digit-2")).sendKeys("9");
+        Thread.sleep(2000);
+
+        webDriver.findElement(By.id("onboarding-age-gate-digit-3")).sendKeys("9");
+        Thread.sleep(2000);
+
+        webDriver.findElement(By.id("onboarding-age-gate-digit-4")).sendKeys("1");
+        Thread.sleep(2000);
+
+        Thread.sleep(10000);
+        webDriver.findElement(By.id("submit-button")).click();
 
     }}
 
