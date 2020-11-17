@@ -44,7 +44,7 @@ public class Youtubekids {
         webDriver.findElement(By.id("onboarding-age-gate-digit-4")).sendKeys("1");
         Thread.sleep(2000);
 
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         webDriver.findElement(By.id("submit-button")).click();
 
     }}
