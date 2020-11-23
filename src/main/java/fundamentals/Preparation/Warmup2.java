@@ -1,5 +1,6 @@
 package fundamentals.Preparation;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -15,5 +16,7 @@ public class Warmup2 {
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver driver= new EdgeDriver();
         driver.get("https://gaana.com/playlist/tanmay5709-gannacom");
+        driver.findElement(By.id("p-list-play_all")).click();
+
     }
 }
