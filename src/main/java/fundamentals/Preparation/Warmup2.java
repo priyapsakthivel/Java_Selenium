@@ -18,7 +18,7 @@ public class Warmup2 {
         WebDriver driver= new EdgeDriver();
         driver.get("https://gaana.com/playlist/tanmay5709-gannacom");
         driver.findElement(By.id("p-list-play_all")).click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
 
     }
 }
