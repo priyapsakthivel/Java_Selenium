@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import java.io.File;
 import java.util.Scanner;
 
+
 public class Instagram {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner= new Scanner(System.in);
