@@ -32,4 +32,23 @@ public class AmazonLogin {
         driver.findElement(By.id("ap_password")).sendKeys("********");
         driver.findElement(By.id("continue")).click();
     }
+    public void testWorld(){
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+        System.out.println("println");
+
+        System.out.println("println");
+        System.out.println("println");
+
+    }
 }
