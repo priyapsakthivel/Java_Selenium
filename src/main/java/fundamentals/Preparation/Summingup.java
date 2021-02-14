@@ -3,7 +3,7 @@ package fundamentals.Preparation;
 public class Summingup {
     int sum1=11;
     int sum2=12;
-    int sum3=42;
+    int sum3=45;
     int sum4=44;
     public static void main(String[]args){
        Summingup obj = new Summingup();
