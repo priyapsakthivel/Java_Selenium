@@ -11,7 +11,7 @@ public class Warmup {
         System.out.println("please enter a number");
         Scanner scanner = new Scanner(System.in);
         int a= scanner.nextInt();
-        if (a%2==0){
+        if (a%2==1){
             System.out.println("its even");
         }
         else{
