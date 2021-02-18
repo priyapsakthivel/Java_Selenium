@@ -7,11 +7,17 @@ public class Scanner_learn {
         Scanner scanner= new Scanner(System.in);
         System.out.println("please enter your name");
         String name= scanner.next();
+        System.out.println("please enter your age");
+        int age= scanner.nextInt();
+        System.out.println("please enter your gender");
+        String gender= scanner.next();
 
         Scanner_learn obj= new Scanner_learn();
-        obj.personal_details(name);
+        obj.personal_details(name,age,gender);
     }
-    public void personal_details(String name){
-        System.out.println(name);
+    public void personal_details(String name,int age,String gender){
+        System.out.println("customer name:"+name);
+        System.out.println("customer age:"+age);
+        System.out.println("customer age:"+gender);
     }
 }
