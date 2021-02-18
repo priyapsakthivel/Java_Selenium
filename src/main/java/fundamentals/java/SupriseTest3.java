@@ -1,5 +1,4 @@
-package fundamentals.java;
-
+package fundament
 
 //Objective add two numbers via method
 public class SupriseTest3 {
