@@ -13,10 +13,11 @@ public class Scanner_learn {
         String gender= scanner.next();
 
         Scanner_learn obj= new Scanner_learn();
-        obj.personal_details(name,age);
+        obj.personal_details(name,age,gender);
     }
-    public void personal_details(String name,int age){
+    public void personal_details(String name,int age,String gender){
         System.out.println("customer name:"+name);
         System.out.println("customer age:"+age);
+        System.out.println("customer age:"+gender);
     }
 }
