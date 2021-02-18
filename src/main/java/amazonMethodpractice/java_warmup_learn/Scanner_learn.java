@@ -9,6 +9,8 @@ public class Scanner_learn {
         String name= scanner.next();
         System.out.println("please enter your age");
         int age= scanner.nextInt();
+        System.out.println("please enter your gender");
+        String gender= scanner.next();
 
         Scanner_learn obj= new Scanner_learn();
         obj.personal_details(name,age);
