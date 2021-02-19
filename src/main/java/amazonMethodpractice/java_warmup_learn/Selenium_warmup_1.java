@@ -18,5 +18,8 @@ public class Selenium_warmup_1 {
       driver.findElement(By.id("user-message")).sendKeys("All the best for the day");
       JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
       javascriptExecutor.executeScript("scrollTo(0,200)");
+      driver.findElement(By.xpath("//*[@id=\"get-input\"]/button")).click();
+      String message=driver.findElement(By.xpath("//*[@id=\"get-input\"]")).getText();
+      System.out.println(message);
     }
 }
