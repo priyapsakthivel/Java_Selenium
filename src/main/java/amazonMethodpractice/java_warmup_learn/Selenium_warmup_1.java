@@ -1,5 +1,6 @@
 package amazonMethodpractice.java_warmup_learn;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -10,6 +11,9 @@ public class Selenium_warmup_1 {
       File file= new File("P:\\Webdrivers\\msedgedriver.exe");
       System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
       WebDriver driver= new EdgeDriver();
-      driver.get("");
+      driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
+      driver.manage().window().maximize();
+      driver.findElement(By.id("user-message"));
+
     }
 }
