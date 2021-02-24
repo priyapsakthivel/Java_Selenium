@@ -24,7 +24,7 @@ public class Selenium_warmup_1 {
     }
     public void message (WebDriver driver){
       JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
-      javascriptExecutor.executeScript("scrollTo(0,200)");
+      javascriptExecutor.executeScript("scrollTo(0,210)");
       driver.findElement(By.xpath("//*[@id=\"get-input\"]/button")).click();
       String message=driver.findElement(By.xpath("//*[@id=\"get-input\"]")).getText();
       System.out.println(message);
