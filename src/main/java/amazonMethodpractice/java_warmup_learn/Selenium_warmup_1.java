@@ -22,9 +22,10 @@ public class Selenium_warmup_1 {
       driver.findElement(By.id("at-cv-lightbox-close")).click();
       driver.findElement(By.id("user-message")).sendKeys("All the best for the day");
     }
-    public void message (WebDriver driver){
+    public void message (WebDriver driver) throws InterruptedException {
       JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
       javascriptExecutor.executeScript("scrollTo(0,210)");
+      Thread.sleep(2000);
       driver.findElement(By.xpath("//*[@id=\"get-input\"]/button")).click();
       String message=driver.findElement(By.xpath("//*[@id=\"get-input\"]")).getText();
       System.out.println(message);
