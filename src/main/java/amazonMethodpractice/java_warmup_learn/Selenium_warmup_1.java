@@ -16,6 +16,7 @@ public class Selenium_warmup_1 {
       Selenium_warmup_1 selenium_warmup_1 = new Selenium_warmup_1();
       selenium_warmup_1.launch(driver);
       selenium_warmup_1.message(driver);
+      selenium_warmup_1.displayed_message(driver);
     }
     public void launch(WebDriver driver) {
       driver.manage().window().maximize();
