@@ -10,9 +10,12 @@ public class Selenium_warmup_2 {
         File file= new File("P:\\Webdrivers\\msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver driver= new EdgeDriver();
+        Selenium_warmup_2 obj= new Selenium_warmup_2();
+        obj.launching(driver);
     }
     public void launching(WebDriver driver){
-
+        driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
+        driver.manage().window().maximize();
 
     }
 }
