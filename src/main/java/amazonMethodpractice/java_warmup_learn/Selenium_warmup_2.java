@@ -31,19 +31,16 @@ public class Selenium_warmup_2 {
         int a=scanner.nextInt();
         System.out.println("please enter any number2");
         int b=scanner.nextInt();
-
     }
-    public void twoinputfield(WebDriver driver){
+    public void twoinputfield(WebDriver driver) throws InterruptedException {
         driver.findElement(By.id("sum1")).sendKeys();
         driver.findElement(By.id("sum2")).sendKeys();
-        time.sleep(2);
+        Thread.sleep(2);
+        driver.findElement(By.xpath("//*[@id='gettotal']/button")).click();
+    }
+    public void display_message(WebDriver driver){
 
     }
-    driver.find_element_by_id("sum2").send_keys(b)
-    time.sleep(2)
-            driver.find_element_by_xpath("//*[@id='gettotal']/button").click()
-    twoinputfield(driver,a,b)
-    def display_message(driver):
     message=driver.find_element_by_id("displayvalue").text
     print(message)
     display_message(driver)
