@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Selenium_warmup_2 {
     public static void main(String[]args){
@@ -22,4 +23,26 @@ public class Selenium_warmup_2 {
     public void popup(WebDriver driver){
         driver.findElement(By.id("at-cv-lightbox-close")).click();
     }
+    public void assigning(WebDriver driver){
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("please enter any number1");
+        int a=scanner.nextInt();
+        System.out.println("please enter any number2");
+        int b=scanner.nextInt();
+
+    }
+    a=input("please enter any number1")
+    b=input("please enter any number2")
+
+    def twoinputfield(driver,a,b):
+            driver.find_element_by_id("sum1").send_keys(a)
+    driver.find_element_by_id("sum2").send_keys(b)
+    time.sleep(2)
+            driver.find_element_by_xpath("//*[@id='gettotal']/button").click()
+    twoinputfield(driver,a,b)
+    def display_message(driver):
+    message=driver.find_element_by_id("displayvalue").text
+    print(message)
+    display_message(driver)
+
 }
