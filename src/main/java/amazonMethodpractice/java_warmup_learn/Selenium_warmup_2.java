@@ -39,7 +39,7 @@ public class Selenium_warmup_2 {
         driver.findElement(By.xpath("//*[@id='gettotal']/button")).click();
     }
     public void display_message(WebDriver driver){
-        driver.findElement(By.id("displayvalue");
+        WebDriver message= driver.findElement(By.id("displayvalue");
         System.out.println(message);
     }
 }
