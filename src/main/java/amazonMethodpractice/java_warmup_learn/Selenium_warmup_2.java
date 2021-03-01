@@ -13,9 +13,11 @@ public class Selenium_warmup_2 {
         Selenium_warmup_2 obj= new Selenium_warmup_2();
         obj.launching(driver);
     }
-    public void launching(WebDriver driver){
+    public void launching(WebDriver driver) throws InterruptedException {
         driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
         driver.manage().window().maximize();
+        Thread.sleep(2000);
+
 
     }
 }
