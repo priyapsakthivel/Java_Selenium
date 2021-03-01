@@ -16,7 +16,7 @@ public class Selenium_warmup_2 {
         obj.launching(driver);
         obj.popup(driver);
         obj.assigning(driver);
-        obj.twoinputfield(driver,assigning);
+        obj.twoinputfield(driver);
     }
     public void launching(WebDriver driver){
         driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
@@ -33,10 +33,12 @@ public class Selenium_warmup_2 {
         int b=scanner.nextInt();
 
     }
-    public void twoinputfield(WebDriver driver,WebDriver assigning){
-        driver.findElement(By.id("sum1")).sendKeys(a);
+    public void twoinputfield(WebDriver driver){
+        driver.findElement(By.id("sum1")).sendKeys();
+        driver.findElement(By.id("sum2")).sendKeys();
+        time.sleep(2);
+
     }
-            driver.find_element_by_id("sum1").send_keys(a)
     driver.find_element_by_id("sum2").send_keys(b)
     time.sleep(2)
             driver.find_element_by_xpath("//*[@id='gettotal']/button").click()
