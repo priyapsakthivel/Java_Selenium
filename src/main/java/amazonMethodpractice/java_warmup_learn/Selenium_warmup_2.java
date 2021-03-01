@@ -31,10 +31,9 @@ public class Selenium_warmup_2 {
         int b=scanner.nextInt();
 
     }
-    a=input("please enter any number1")
-    b=input("please enter any number2")
-
-    def twoinputfield(driver,a,b):
+    public void twoinputfield(WebDriver driver,WebDriver assigning){
+        driver.findElement(By.id("sum1")).sendKeys(a);
+    }
             driver.find_element_by_id("sum1").send_keys(a)
     driver.find_element_by_id("sum2").send_keys(b)
     time.sleep(2)
