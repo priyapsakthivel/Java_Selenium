@@ -15,6 +15,8 @@ public class Selenium_warmup_2 {
         Selenium_warmup_2 obj= new Selenium_warmup_2();
         obj.launching(driver);
         obj.popup(driver);
+        obj.assigning(driver);
+        obj.twoinputfield(driver,assigning);
     }
     public void launching(WebDriver driver){
         driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
