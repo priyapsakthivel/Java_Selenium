@@ -6,12 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Selenium_warmup_2 {
     public static void main(String[]args) throws InterruptedException {
         File file= new File("P:\\Webdrivers\\msedgedriver.exe");
         System.setProperty("webdriver.edge.driver",file.getAbsolutePath());
         WebDriver driver= new EdgeDriver();
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
         Selenium_warmup_2 obj= new Selenium_warmup_2();
         obj.launching(driver);
         obj.closeepopup(driver);
@@ -27,7 +31,12 @@ public class Selenium_warmup_2 {
         driver.findElement(By.id("at-cv-lightbox-close")).click();
         Thread.sleep(2000);
     }
-    public void twoinputfield(WebDriver driver,int a, int b){
-        driver.findElement(By.id("sum1")).sendKeys();
+    public void twoinputfield(WebDriver driver,int a, int b) throws InterruptedException {
+        driver.findElement(By.id("sum1")).sendKeys("a");
+        driver.findElement(By.id("sum2")).sendKeys("b");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("<button type=\"button\" onclick=\"return total()\" class=\"btn btn-default\">Get Total</button>")).click();
+        String total=driver.findElement(By.id("displayvalue")).getText();
+        System.out.println(total);
     }
 }
