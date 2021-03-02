@@ -27,7 +27,7 @@ public class SeleniumBasics {
     public WebDriver browserAppearance(WebDriver driver){
        driver.manage().window().maximize();
         JavascriptExecutor jse= (JavascriptExecutor)driver;
-        jse.executeScript("scrollTo(0,200)");
+        jse.executeScript("scrollTo(0,100)");
         return driver;
     }
     public WebDriver loginDetails(WebDriver driver){
