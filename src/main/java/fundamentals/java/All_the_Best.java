@@ -7,7 +7,7 @@ public class All_the_Best {
     }
     public int exam() throws InterruptedException {
         int a = 0;
-        for(int i =1;i<=11;i+){
+        for(int i =1;i<=11;i++){
             if(a==i/2){System.out.println("All the best for your exam");}
             else{System.out.println("do ur best");
                 Thread.sleep(2000);
