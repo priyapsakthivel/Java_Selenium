@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
-import java.util.Scanner;
 
 public class SeleniumBasics {
     public static void main(String[] args) {
