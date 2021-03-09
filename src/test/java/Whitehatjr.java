@@ -18,7 +18,7 @@ public class Whitehatjr {
         System.out.println("please enter email id");
         String email =scanner.next();
         website.findElement(By.id("email")).sendKeys(email);
-        Thread.sleep(2000);
+        Thread.sleep(200);
         System.out.println("please enter parentname");
         String parentname =scanner.next();
         website.findElement(By.id("parentName")).sendKeys(parentname);
