@@ -26,7 +26,7 @@ public class Whitehatjr {
         System.out.println("please enter phoneNumber");
         String phoneNumber =scanner.next();
         website.findElement(By.id("mobile")).sendKeys(phoneNumber);
-        Thread.sleep(2000);
+        Thread.sleep(200);
         System.out.println("please enter studentName");
         String studentName =scanner.next();
         website.findElement(By.id("studentName")).sendKeys(studentName);
