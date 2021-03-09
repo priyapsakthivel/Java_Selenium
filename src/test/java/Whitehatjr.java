@@ -22,7 +22,7 @@ public class Whitehatjr {
         System.out.println("please enter parentname");
         String parentname =scanner.next();
         website.findElement(By.id("parentName")).sendKeys(parentname);
-        Thread.sleep(2000);
+        Thread.sleep(200);
         System.out.println("please enter phoneNumber");
         String phoneNumber =scanner.next();
         website.findElement(By.id("mobile")).sendKeys(phoneNumber);
