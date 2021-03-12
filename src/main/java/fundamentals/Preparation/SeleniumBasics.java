@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
-import java.util.Scanner;
 
 public class SeleniumBasics {
     public static void main(String[] args) {
@@ -27,7 +26,7 @@ public class SeleniumBasics {
     public WebDriver browserAppearance(WebDriver driver){
        driver.manage().window().maximize();
         JavascriptExecutor jse= (JavascriptExecutor)driver;
-        jse.executeScript("scrollTo(0,200)");
+        jse.executeScript("scrollTo(0,100)");
         return driver;
     }
     public WebDriver loginDetails(WebDriver driver){
