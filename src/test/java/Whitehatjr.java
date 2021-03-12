@@ -11,6 +11,7 @@ public class Whitehatjr {
         driver.get("https://code.whitehatjr.com/trial/register?utm_source=Google_India_Search&utm_campaign=Sok_Whitehat_Search_Brand_Exact&utm_content=87393542122&utm_term=434998326935&gclid=EAIaIQobChMI_bqYnp346wIVwtaWCh1yuQTYEAAYASAAEgL86fD_BwE");
         driver.manage().window().maximize();
 //        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         return driver;
     }
     @Test
